@@ -10,8 +10,3 @@ D:\Practice\trunk\Utilities\StringUtilties\bin\StringUtilties.pdb
 D:\Practice\trunk\Utilities\StringUtilties\obj\Debug\StringUtilties.dll
 D:\Practice\trunk\Utilities\StringUtilties\obj\Debug\StringUtilties.pdb
 D:\Practice\trunk\Utilities\StringUtilties\obj\Debug\StringUtilties.csprojResolveAssemblyReference.cache
-H:\GitKu\NetUtilities\Utilities\StringUtilties\bin\StringUtilties.dll.config
-H:\GitKu\NetUtilities\Utilities\StringUtilties\bin\StringUtilties.dll
-H:\GitKu\NetUtilities\Utilities\StringUtilties\bin\StringUtilties.pdb
-H:\GitKu\NetUtilities\Utilities\StringUtilties\obj\Debug\StringUtilties.dll
-H:\GitKu\NetUtilities\Utilities\StringUtilties\obj\Debug\StringUtilties.pdb
