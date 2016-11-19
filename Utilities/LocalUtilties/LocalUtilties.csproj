@@ -51,9 +51,6 @@
     <Compile Include="StringHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="Service References\YjjUtilities\LocalUtilties.YjjUtilities.GetEncryptStrResultResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -167,6 +164,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\YjjUtilities\StringHelperProxy.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\YjjUtilities\" />

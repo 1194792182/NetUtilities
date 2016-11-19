@@ -69,24 +69,6 @@
     </None>
     <Content Include="StringHelperProxy.asmx" />
     <Content Include="Web.config" />
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetIntListBySplitStrResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStringListBySplitStrResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStrByIntListWithSpliterResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStrByStrListWithSpliterResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.ToFullWidthStrResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.ToHalfWidthStrResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,31 +85,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\StringUtilties\StringHelper.wsdl" />
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.ReplaceSpecialStrResponse.datasource">
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetEncryptStrResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetIntListBySplitStrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetMd5SaltStrResultResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetSplitStrByRegexPatternResultResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetEncryptStrResultResponse.datasource">
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStrByIntListWithSpliterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStrByStrListWithSpliterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStringListBySplitStrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStrLengthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetSubStrByLengthResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsBetweenLengthNumResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsMaximumLengthNumResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsMinimumLengthNumResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsNumResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsPositiveRealNumWithTwoDecimalPlacesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsPositiveRealNumWithZeroToThreeDecimalPlacesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsCapitalLetterResponse.datasource">
@@ -142,10 +127,22 @@
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsIdNumStrResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsIpAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsLetterResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsLowerCaseLetterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsMatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsMaximumLengthNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsMinimumLengthNumResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsNonZeroNegativeIntegerResponse.datasource">
@@ -160,7 +157,16 @@
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsNumAndLetterResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsPhoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsPositiveRealNumWithTwoDecimalPlacesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsPositiveRealNumWithZeroToThreeDecimalPlacesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsPostalCodeResponse.datasource">
@@ -181,19 +187,13 @@
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsUserNameWithSpecifiedLengthResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsIpAddressResponse.datasource">
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.ReplaceSpecialStrResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.IsMatchResponse.datasource">
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.ToFullWidthStrResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetMd5SaltStrResultResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStrLengthResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetSubStrByLengthResponse.datasource">
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.ToHalfWidthStrResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
