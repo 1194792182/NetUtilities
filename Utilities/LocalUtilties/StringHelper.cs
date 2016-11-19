@@ -418,5 +418,19 @@ namespace LocalUtilties
         }
 
         #endregion
+
+        #region 根据字符串长度处理字符串
+        /// <summary>
+        /// 得到字符串长度，一个汉字长度为2
+        /// </summary>
+        /// <param name="input">要处理的字符串</param>
+        /// <returns></returns>
+        public static int GetLength(this string input)
+        {
+            var header = new StringHelperProxySoapHeader() { SecretKey = SecretKey };
+            return StrHelperClient.GetStrLength(header,input);
+        }
+
+        #endregion
     }
 }

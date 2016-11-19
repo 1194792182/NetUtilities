@@ -802,5 +802,40 @@ namespace StringUtilties
 
         #endregion
 
+        #region 根据字符串长度处理字符串
+
+        /// <summary>
+        /// 得到字符串长度，一个汉字长度为2
+        /// </summary>
+        /// <param name="input">要处理的字符串</param>
+        /// <returns></returns>
+        [WebMethod(Description = "得到字符串长度，一个汉字长度为2")]
+        [SoapHeader("StringHelperSoapHeader")]
+        public int GetStrLength(string input)
+        {
+            if (!StringHelperSoapHeader.IsValid)
+            {
+                return -1;
+            }
+            var ascii = new ASCIIEncoding();
+            var length = 0;
+            var bytes = ascii.GetBytes(input);
+            foreach (var t in bytes)
+            {
+                if (t == 63)
+                {
+                    length += 2;
+                }
+                else
+                {
+                    length += 1;
+                }
+            }
+            return length;
+        }
+
+        #endregion
+
+
     }
 }

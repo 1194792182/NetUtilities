@@ -294,6 +294,14 @@ namespace YjjUtilities.StringUtilties {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/IsMatch", ReplyAction="*")]
         System.Threading.Tasks.Task<YjjUtilities.StringUtilties.IsMatchResponse> IsMatchAsync(YjjUtilities.StringUtilties.IsMatchRequest request);
+        
+        // CODEGEN: 消息 GetStrLengthRequest 以后生成的消息协定具有标头
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/GetStrLength", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        YjjUtilities.StringUtilties.GetStrLengthResponse GetStrLength(YjjUtilities.StringUtilties.GetStrLengthRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/GetStrLength", ReplyAction="*")]
+        System.Threading.Tasks.Task<YjjUtilities.StringUtilties.GetStrLengthResponse> GetStrLengthAsync(YjjUtilities.StringUtilties.GetStrLengthRequest request);
     }
     
     /// <remarks/>
@@ -1756,6 +1764,44 @@ namespace YjjUtilities.StringUtilties {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetStrLength", WrapperNamespace="http://www.1194792182.com/", IsWrapped=true)]
+    public partial class GetStrLengthRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://www.1194792182.com/")]
+        public YjjUtilities.StringUtilties.StringHelperSoapHeader StringHelperSoapHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=0)]
+        public string input;
+        
+        public GetStrLengthRequest() {
+        }
+        
+        public GetStrLengthRequest(YjjUtilities.StringUtilties.StringHelperSoapHeader StringHelperSoapHeader, string input) {
+            this.StringHelperSoapHeader = StringHelperSoapHeader;
+            this.input = input;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetStrLengthResponse", WrapperNamespace="http://www.1194792182.com/", IsWrapped=true)]
+    public partial class GetStrLengthResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=0)]
+        public int GetStrLengthResult;
+        
+        public GetStrLengthResponse() {
+        }
+        
+        public GetStrLengthResponse(int GetStrLengthResult) {
+            this.GetStrLengthResult = GetStrLengthResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface StringHelperSoapChannel : YjjUtilities.StringUtilties.StringHelperSoap, System.ServiceModel.IClientChannel {
     }
@@ -2698,6 +2744,31 @@ namespace YjjUtilities.StringUtilties {
             inValue.pattern = pattern;
             inValue.options = options;
             return ((YjjUtilities.StringUtilties.StringHelperSoap)(this)).IsMatchAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        YjjUtilities.StringUtilties.GetStrLengthResponse YjjUtilities.StringUtilties.StringHelperSoap.GetStrLength(YjjUtilities.StringUtilties.GetStrLengthRequest request) {
+            return base.Channel.GetStrLength(request);
+        }
+        
+        public int GetStrLength(YjjUtilities.StringUtilties.StringHelperSoapHeader StringHelperSoapHeader, string input) {
+            YjjUtilities.StringUtilties.GetStrLengthRequest inValue = new YjjUtilities.StringUtilties.GetStrLengthRequest();
+            inValue.StringHelperSoapHeader = StringHelperSoapHeader;
+            inValue.input = input;
+            YjjUtilities.StringUtilties.GetStrLengthResponse retVal = ((YjjUtilities.StringUtilties.StringHelperSoap)(this)).GetStrLength(inValue);
+            return retVal.GetStrLengthResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<YjjUtilities.StringUtilties.GetStrLengthResponse> YjjUtilities.StringUtilties.StringHelperSoap.GetStrLengthAsync(YjjUtilities.StringUtilties.GetStrLengthRequest request) {
+            return base.Channel.GetStrLengthAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<YjjUtilities.StringUtilties.GetStrLengthResponse> GetStrLengthAsync(YjjUtilities.StringUtilties.StringHelperSoapHeader StringHelperSoapHeader, string input) {
+            YjjUtilities.StringUtilties.GetStrLengthRequest inValue = new YjjUtilities.StringUtilties.GetStrLengthRequest();
+            inValue.StringHelperSoapHeader = StringHelperSoapHeader;
+            inValue.input = input;
+            return ((YjjUtilities.StringUtilties.StringHelperSoap)(this)).GetStrLengthAsync(inValue);
         }
     }
 }

@@ -15,3 +15,4 @@ H:\GitKu\NetUtilities\Utilities\YjjUtilities\bin\YjjUtilities.dll
 H:\GitKu\NetUtilities\Utilities\YjjUtilities\bin\YjjUtilities.pdb
 H:\GitKu\NetUtilities\Utilities\YjjUtilities\obj\Debug\YjjUtilities.dll
 H:\GitKu\NetUtilities\Utilities\YjjUtilities\obj\Debug\YjjUtilities.pdb
+H:\GitKu\NetUtilities\Utilities\YjjUtilities\obj\Debug\YjjUtilities.csprojResolveAssemblyReference.cache

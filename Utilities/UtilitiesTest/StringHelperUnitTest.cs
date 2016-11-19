@@ -504,5 +504,22 @@ namespace UtilitiesTest
         }
 
         #endregion
+
+        #region 根据字符串长度处理字符串
+
+        /// <summary>
+        /// 测试获取字符串长度
+        /// </summary>
+        [TestMethod]
+        public void TestGetLength()
+        {
+            var str = "中国";
+            var firstLength = str.GetLength();
+            str = "ab";
+            var secondLength = str.GetLength();
+            Assert.IsFalse(firstLength.Equals(secondLength),"firstLength.Equals(secondLength)");
+        }
+
+        #endregion
     }
 }

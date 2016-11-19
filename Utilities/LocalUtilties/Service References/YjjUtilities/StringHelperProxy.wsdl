@@ -531,6 +531,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetStrLength">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStrLengthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetStrLengthResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
     <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
       <s:simpleType name="char">
@@ -853,6 +867,15 @@
   <wsdl:message name="IsMatchStringHelperProxySoapHeader">
     <wsdl:part name="StringHelperProxySoapHeader" element="tns:StringHelperProxySoapHeader" />
   </wsdl:message>
+  <wsdl:message name="GetStrLengthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStrLength" />
+  </wsdl:message>
+  <wsdl:message name="GetStrLengthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStrLengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStrLengthStringHelperProxySoapHeader">
+    <wsdl:part name="StringHelperProxySoapHeader" element="tns:StringHelperProxySoapHeader" />
+  </wsdl:message>
   <wsdl:portType name="StringHelperProxySoap">
     <wsdl:operation name="GetIntListBySplitStr">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">将含有指定字符的字符串转成以该字符分割的整型列表</wsdl:documentation>
@@ -1028,6 +1051,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">是否与指定正则表达式匹配</wsdl:documentation>
       <wsdl:input message="tns:IsMatchSoapIn" />
       <wsdl:output message="tns:IsMatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrLength">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">得到字符串长度，一个汉字长度为2</wsdl:documentation>
+      <wsdl:input message="tns:GetStrLengthSoapIn" />
+      <wsdl:output message="tns:GetStrLengthSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="StringHelperProxySoap" type="tns:StringHelperProxySoap">
@@ -1382,6 +1410,16 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetStrLength">
+      <soap:operation soapAction="http://www.1194792182.com/GetStrLength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetStrLengthStringHelperProxySoapHeader" part="StringHelperProxySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="StringHelperProxySoap12" type="tns:StringHelperProxySoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1730,6 +1768,16 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:IsMatchStringHelperProxySoapHeader" part="StringHelperProxySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrLength">
+      <soap12:operation soapAction="http://www.1194792182.com/GetStrLength" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetStrLengthStringHelperProxySoapHeader" part="StringHelperProxySoapHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

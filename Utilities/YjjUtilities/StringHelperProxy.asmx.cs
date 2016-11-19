@@ -548,5 +548,20 @@ namespace YjjUtilities
         }
 
         #endregion
+
+        #region 根据字符串长度处理字符串
+
+        [WebMethod(Description = "得到字符串长度，一个汉字长度为2")]
+        [SoapHeader("StringHelperProxySoapHeader")]
+        public int GetStrLength(string input)
+        {
+            if (!StringHelperProxySoapHeader.IsValid)
+            {
+                return -1;
+            }
+            return CurrentClient.GetStrLength(CurrentHeader, input);
+        }
+
+        #endregion
     }
 }
