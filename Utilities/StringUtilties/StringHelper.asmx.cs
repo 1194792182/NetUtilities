@@ -834,6 +834,60 @@ namespace StringUtilties
             return length;
         }
 
+        /// <summary>
+        /// 按指定的长度截取字符串
+        /// </summary>
+        /// <param name="input">要截取的字符串</param>
+        /// <param name="length">要截取的长度</param>
+        /// <param name="fixStr">截取后填充的字符</param>
+        /// <returns></returns>
+        [WebMethod(Description = "按指定的长度截取字符串")]
+        [SoapHeader("StringHelperSoapHeader")]
+        public string GetSubStrByLength(string input, int length, string fixStr = "...")
+        {
+            var showFixStr = false;
+
+            if (length % 2 == 1)
+            {
+                showFixStr = true;
+                length--;
+            }
+
+            var tempLength = 0;
+            var tempStr = string.Empty;
+            var bytes = new ASCIIEncoding().GetBytes(input);
+
+            for (var i = 0; i < bytes.Length; i++)
+            {
+                var step = 0;
+                step = bytes[i] == 63 ? 2 : 1;
+
+                tempLength += step;
+
+                try
+                {
+                    tempStr += input.Substring(i, 1);
+                }
+                catch
+                {
+                    break;
+                }
+
+                if (tempLength >= length)
+                {
+                    break;
+                }
+            }
+
+            var inputByte = Encoding.Default.GetBytes(input);
+            if (showFixStr && inputByte.Length > length)
+            {
+                tempStr += fixStr;
+            }
+            return tempStr;
+        }
+
+
         #endregion
 
 

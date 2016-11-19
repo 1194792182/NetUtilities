@@ -302,6 +302,14 @@ namespace YjjUtilities.StringUtilties {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/GetStrLength", ReplyAction="*")]
         System.Threading.Tasks.Task<YjjUtilities.StringUtilties.GetStrLengthResponse> GetStrLengthAsync(YjjUtilities.StringUtilties.GetStrLengthRequest request);
+        
+        // CODEGEN: 消息 GetSubStrByLengthRequest 以后生成的消息协定具有标头
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/GetSubStrByLength", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        YjjUtilities.StringUtilties.GetSubStrByLengthResponse GetSubStrByLength(YjjUtilities.StringUtilties.GetSubStrByLengthRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/GetSubStrByLength", ReplyAction="*")]
+        System.Threading.Tasks.Task<YjjUtilities.StringUtilties.GetSubStrByLengthResponse> GetSubStrByLengthAsync(YjjUtilities.StringUtilties.GetSubStrByLengthRequest request);
     }
     
     /// <remarks/>
@@ -1802,6 +1810,52 @@ namespace YjjUtilities.StringUtilties {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSubStrByLength", WrapperNamespace="http://www.1194792182.com/", IsWrapped=true)]
+    public partial class GetSubStrByLengthRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://www.1194792182.com/")]
+        public YjjUtilities.StringUtilties.StringHelperSoapHeader StringHelperSoapHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=0)]
+        public string input;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=1)]
+        public int length;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=2)]
+        public string fixStr;
+        
+        public GetSubStrByLengthRequest() {
+        }
+        
+        public GetSubStrByLengthRequest(YjjUtilities.StringUtilties.StringHelperSoapHeader StringHelperSoapHeader, string input, int length, string fixStr) {
+            this.StringHelperSoapHeader = StringHelperSoapHeader;
+            this.input = input;
+            this.length = length;
+            this.fixStr = fixStr;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSubStrByLengthResponse", WrapperNamespace="http://www.1194792182.com/", IsWrapped=true)]
+    public partial class GetSubStrByLengthResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=0)]
+        public string GetSubStrByLengthResult;
+        
+        public GetSubStrByLengthResponse() {
+        }
+        
+        public GetSubStrByLengthResponse(string GetSubStrByLengthResult) {
+            this.GetSubStrByLengthResult = GetSubStrByLengthResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface StringHelperSoapChannel : YjjUtilities.StringUtilties.StringHelperSoap, System.ServiceModel.IClientChannel {
     }
@@ -2769,6 +2823,35 @@ namespace YjjUtilities.StringUtilties {
             inValue.StringHelperSoapHeader = StringHelperSoapHeader;
             inValue.input = input;
             return ((YjjUtilities.StringUtilties.StringHelperSoap)(this)).GetStrLengthAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        YjjUtilities.StringUtilties.GetSubStrByLengthResponse YjjUtilities.StringUtilties.StringHelperSoap.GetSubStrByLength(YjjUtilities.StringUtilties.GetSubStrByLengthRequest request) {
+            return base.Channel.GetSubStrByLength(request);
+        }
+        
+        public string GetSubStrByLength(YjjUtilities.StringUtilties.StringHelperSoapHeader StringHelperSoapHeader, string input, int length, string fixStr) {
+            YjjUtilities.StringUtilties.GetSubStrByLengthRequest inValue = new YjjUtilities.StringUtilties.GetSubStrByLengthRequest();
+            inValue.StringHelperSoapHeader = StringHelperSoapHeader;
+            inValue.input = input;
+            inValue.length = length;
+            inValue.fixStr = fixStr;
+            YjjUtilities.StringUtilties.GetSubStrByLengthResponse retVal = ((YjjUtilities.StringUtilties.StringHelperSoap)(this)).GetSubStrByLength(inValue);
+            return retVal.GetSubStrByLengthResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<YjjUtilities.StringUtilties.GetSubStrByLengthResponse> YjjUtilities.StringUtilties.StringHelperSoap.GetSubStrByLengthAsync(YjjUtilities.StringUtilties.GetSubStrByLengthRequest request) {
+            return base.Channel.GetSubStrByLengthAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<YjjUtilities.StringUtilties.GetSubStrByLengthResponse> GetSubStrByLengthAsync(YjjUtilities.StringUtilties.StringHelperSoapHeader StringHelperSoapHeader, string input, int length, string fixStr) {
+            YjjUtilities.StringUtilties.GetSubStrByLengthRequest inValue = new YjjUtilities.StringUtilties.GetSubStrByLengthRequest();
+            inValue.StringHelperSoapHeader = StringHelperSoapHeader;
+            inValue.input = input;
+            inValue.length = length;
+            inValue.fixStr = fixStr;
+            return ((YjjUtilities.StringUtilties.StringHelperSoap)(this)).GetSubStrByLengthAsync(inValue);
         }
     }
 }

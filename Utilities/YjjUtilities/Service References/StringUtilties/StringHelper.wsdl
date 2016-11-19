@@ -545,6 +545,22 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetSubStrByLength">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="length" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fixStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubStrByLengthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSubStrByLengthResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
     <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
       <s:simpleType name="char">
@@ -876,6 +892,15 @@
   <wsdl:message name="GetStrLengthStringHelperSoapHeader">
     <wsdl:part name="StringHelperSoapHeader" element="tns:StringHelperSoapHeader" />
   </wsdl:message>
+  <wsdl:message name="GetSubStrByLengthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubStrByLength" />
+  </wsdl:message>
+  <wsdl:message name="GetSubStrByLengthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubStrByLengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubStrByLengthStringHelperSoapHeader">
+    <wsdl:part name="StringHelperSoapHeader" element="tns:StringHelperSoapHeader" />
+  </wsdl:message>
   <wsdl:portType name="StringHelperSoap">
     <wsdl:operation name="GetIntListBySplitStr">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">将含有指定字符的字符串转成以该字符分割的整型列表</wsdl:documentation>
@@ -1056,6 +1081,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">得到字符串长度，一个汉字长度为2</wsdl:documentation>
       <wsdl:input message="tns:GetStrLengthSoapIn" />
       <wsdl:output message="tns:GetStrLengthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubStrByLength">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">按指定的长度截取字符串</wsdl:documentation>
+      <wsdl:input message="tns:GetSubStrByLengthSoapIn" />
+      <wsdl:output message="tns:GetSubStrByLengthSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="StringHelperSoap" type="tns:StringHelperSoap">
@@ -1420,6 +1450,16 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetSubStrByLength">
+      <soap:operation soapAction="http://www.1194792182.com/GetSubStrByLength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSubStrByLengthStringHelperSoapHeader" part="StringHelperSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="StringHelperSoap12" type="tns:StringHelperSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1778,6 +1818,16 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:GetStrLengthStringHelperSoapHeader" part="StringHelperSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubStrByLength">
+      <soap12:operation soapAction="http://www.1194792182.com/GetSubStrByLength" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSubStrByLengthStringHelperSoapHeader" part="StringHelperSoapHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

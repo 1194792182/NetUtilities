@@ -520,6 +520,36 @@ namespace UtilitiesTest
             Assert.IsFalse(firstLength.Equals(secondLength),"firstLength.Equals(secondLength)");
         }
 
+
+        /// <summary>
+        /// 测试按指定的长度截取字符串
+        /// </summary>
+        [TestMethod]
+        public void TestGetSubStrByLength()
+        {
+            var str = "hello,中国人";
+            var length = str.GetLength();
+            var fixStr = "......";
+            var subStr = str.GetSubStrByLength(length, fixStr);
+            if (length % 2 == 0)
+            {
+                Assert.AreEqual(str, subStr);
+            }
+            else
+            {
+                Assert.AreEqual(str + fixStr, subStr);
+            }
+
+            subStr = str.GetSubStrByLength(3, fixStr);
+            Assert.AreEqual(string.Concat("he", fixStr), subStr);
+            subStr = str.GetSubStrByLength(4, fixStr);
+            Assert.AreEqual("hell", subStr);
+            subStr = str.GetSubStrByLength(7, fixStr);
+            Assert.AreEqual(string.Concat("hello,", fixStr), subStr);
+            subStr = str.GetSubStrByLength(8, fixStr);
+            Assert.AreEqual("hello,中", subStr);
+        }
+
         #endregion
     }
 }

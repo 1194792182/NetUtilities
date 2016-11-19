@@ -193,6 +193,9 @@
     <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetStrLengthResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\StringUtilties\YjjUtilities.StringUtilties.GetSubStrByLengthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

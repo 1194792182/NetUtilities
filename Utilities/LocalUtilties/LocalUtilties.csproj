@@ -79,6 +79,9 @@
     <None Include="Service References\YjjUtilities\LocalUtilties.YjjUtilities.GetStrLengthResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\YjjUtilities\LocalUtilties.YjjUtilities.GetSubStrByLengthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\YjjUtilities\LocalUtilties.YjjUtilities.IsBetweenLengthNumResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

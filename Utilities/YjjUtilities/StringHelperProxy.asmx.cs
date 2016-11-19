@@ -562,6 +562,18 @@ namespace YjjUtilities
             return CurrentClient.GetStrLength(CurrentHeader, input);
         }
 
+        [WebMethod(Description = "按指定的长度截取字符串")]
+        [SoapHeader("StringHelperProxySoapHeader")]
+        public string GetSubStrByLength(string input, int length, string fixStr = "...")
+        {
+            if (!StringHelperProxySoapHeader.IsValid)
+            {
+                return null;
+            }
+
+            return CurrentClient.GetSubStrByLength(CurrentHeader, input, length, fixStr);
+        }
+
         #endregion
     }
 }

@@ -430,6 +430,19 @@ namespace LocalUtilties
             var header = new StringHelperProxySoapHeader() { SecretKey = SecretKey };
             return StrHelperClient.GetStrLength(header,input);
         }
+        
+        /// <summary>
+        /// 按指定的长度截取字符串
+        /// </summary>
+        /// <param name="input">要截取的字符串</param>
+        /// <param name="length">要截取的长度</param>
+        /// <param name="fixStr">截取后填充的字符</param>
+        /// <returns></returns>
+        public static string GetSubStrByLength(this string input, int length, string fixStr = "...")
+        {
+            var header = new StringHelperProxySoapHeader() { SecretKey = SecretKey };
+            return StrHelperClient.GetSubStrByLength(header, input, length, fixStr);
+        }
 
         #endregion
     }
