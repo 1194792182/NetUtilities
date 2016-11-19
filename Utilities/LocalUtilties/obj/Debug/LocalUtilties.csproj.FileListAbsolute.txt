@@ -9,3 +9,8 @@ D:\Practice\trunk\Utilities\LocalUtilties\bin\Debug\LocalUtilties.dll
 D:\Practice\trunk\Utilities\LocalUtilties\bin\Debug\LocalUtilties.pdb
 D:\Practice\trunk\Utilities\LocalUtilties\obj\Debug\LocalUtilties.dll
 D:\Practice\trunk\Utilities\LocalUtilties\obj\Debug\LocalUtilties.pdb
+H:\GitKu\NetUtilities\Utilities\LocalUtilties\bin\Debug\LocalUtilties.dll.config
+H:\GitKu\NetUtilities\Utilities\LocalUtilties\bin\Debug\LocalUtilties.dll
+H:\GitKu\NetUtilities\Utilities\LocalUtilties\bin\Debug\LocalUtilties.pdb
+H:\GitKu\NetUtilities\Utilities\LocalUtilties\obj\Debug\LocalUtilties.dll
+H:\GitKu\NetUtilities\Utilities\LocalUtilties\obj\Debug\LocalUtilties.pdb

@@ -16,3 +16,11 @@ D:\Practice\trunk\Utilities\UtilitiesTest\bin\Debug\zh-Hans\Microsoft.VisualStud
 D:\Practice\trunk\Utilities\UtilitiesTest\obj\Debug\UtilitiesTest.csprojResolveAssemblyReference.cache
 D:\Practice\trunk\Utilities\UtilitiesTest\obj\Debug\UtilitiesTest.dll
 D:\Practice\trunk\Utilities\UtilitiesTest\obj\Debug\UtilitiesTest.pdb
+H:\GitKu\NetUtilities\Utilities\UtilitiesTest\bin\Debug\UtilitiesTest.dll.config
+H:\GitKu\NetUtilities\Utilities\UtilitiesTest\bin\Debug\UtilitiesTest.dll
+H:\GitKu\NetUtilities\Utilities\UtilitiesTest\bin\Debug\UtilitiesTest.pdb
+H:\GitKu\NetUtilities\Utilities\UtilitiesTest\bin\Debug\LocalUtilties.dll
+H:\GitKu\NetUtilities\Utilities\UtilitiesTest\bin\Debug\LocalUtilties.pdb
+H:\GitKu\NetUtilities\Utilities\UtilitiesTest\obj\Debug\UtilitiesTest.csprojResolveAssemblyReference.cache
+H:\GitKu\NetUtilities\Utilities\UtilitiesTest\obj\Debug\UtilitiesTest.dll
+H:\GitKu\NetUtilities\Utilities\UtilitiesTest\obj\Debug\UtilitiesTest.pdb
