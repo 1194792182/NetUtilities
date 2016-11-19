@@ -87,6 +87,14 @@ namespace LocalUtilties.YjjUtilities {
         [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/GetEncryptStrResult", ReplyAction="*")]
         System.Threading.Tasks.Task<LocalUtilties.YjjUtilities.GetEncryptStrResultResponse> GetEncryptStrResultAsync(LocalUtilties.YjjUtilities.GetEncryptStrResultRequest request);
         
+        // CODEGEN: 消息 GetMd5SaltStrResultRequest 以后生成的消息协定具有标头
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/GetMd5SaltStrResult", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LocalUtilties.YjjUtilities.GetMd5SaltStrResultResponse GetMd5SaltStrResult(LocalUtilties.YjjUtilities.GetMd5SaltStrResultRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/GetMd5SaltStrResult", ReplyAction="*")]
+        System.Threading.Tasks.Task<LocalUtilties.YjjUtilities.GetMd5SaltStrResultResponse> GetMd5SaltStrResultAsync(LocalUtilties.YjjUtilities.GetMd5SaltStrResultRequest request);
+        
         // CODEGEN: 消息 IsNumRequest 以后生成的消息协定具有标头
         [System.ServiceModel.OperationContractAttribute(Action="http://www.1194792182.com/IsNum", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -713,6 +721,48 @@ namespace LocalUtilties.YjjUtilities {
         
         public GetEncryptStrResultResponse(string GetEncryptStrResultResult) {
             this.GetEncryptStrResultResult = GetEncryptStrResultResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetMd5SaltStrResult", WrapperNamespace="http://www.1194792182.com/", IsWrapped=true)]
+    public partial class GetMd5SaltStrResultRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://www.1194792182.com/")]
+        public LocalUtilties.YjjUtilities.StringHelperProxySoapHeader StringHelperProxySoapHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=0)]
+        public string str;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=1)]
+        public string salt;
+        
+        public GetMd5SaltStrResultRequest() {
+        }
+        
+        public GetMd5SaltStrResultRequest(LocalUtilties.YjjUtilities.StringHelperProxySoapHeader StringHelperProxySoapHeader, string str, string salt) {
+            this.StringHelperProxySoapHeader = StringHelperProxySoapHeader;
+            this.str = str;
+            this.salt = salt;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetMd5SaltStrResultResponse", WrapperNamespace="http://www.1194792182.com/", IsWrapped=true)]
+    public partial class GetMd5SaltStrResultResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.1194792182.com/", Order=0)]
+        public string GetMd5SaltStrResultResult;
+        
+        public GetMd5SaltStrResultResponse() {
+        }
+        
+        public GetMd5SaltStrResultResponse(string GetMd5SaltStrResultResult) {
+            this.GetMd5SaltStrResultResult = GetMd5SaltStrResultResult;
         }
     }
     
@@ -1976,6 +2026,33 @@ namespace LocalUtilties.YjjUtilities {
             inValue.str = str;
             inValue.encodingStr = encodingStr;
             return ((LocalUtilties.YjjUtilities.StringHelperProxySoap)(this)).GetEncryptStrResultAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LocalUtilties.YjjUtilities.GetMd5SaltStrResultResponse LocalUtilties.YjjUtilities.StringHelperProxySoap.GetMd5SaltStrResult(LocalUtilties.YjjUtilities.GetMd5SaltStrResultRequest request) {
+            return base.Channel.GetMd5SaltStrResult(request);
+        }
+        
+        public string GetMd5SaltStrResult(LocalUtilties.YjjUtilities.StringHelperProxySoapHeader StringHelperProxySoapHeader, string str, string salt) {
+            LocalUtilties.YjjUtilities.GetMd5SaltStrResultRequest inValue = new LocalUtilties.YjjUtilities.GetMd5SaltStrResultRequest();
+            inValue.StringHelperProxySoapHeader = StringHelperProxySoapHeader;
+            inValue.str = str;
+            inValue.salt = salt;
+            LocalUtilties.YjjUtilities.GetMd5SaltStrResultResponse retVal = ((LocalUtilties.YjjUtilities.StringHelperProxySoap)(this)).GetMd5SaltStrResult(inValue);
+            return retVal.GetMd5SaltStrResultResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LocalUtilties.YjjUtilities.GetMd5SaltStrResultResponse> LocalUtilties.YjjUtilities.StringHelperProxySoap.GetMd5SaltStrResultAsync(LocalUtilties.YjjUtilities.GetMd5SaltStrResultRequest request) {
+            return base.Channel.GetMd5SaltStrResultAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LocalUtilties.YjjUtilities.GetMd5SaltStrResultResponse> GetMd5SaltStrResultAsync(LocalUtilties.YjjUtilities.StringHelperProxySoapHeader StringHelperProxySoapHeader, string str, string salt) {
+            LocalUtilties.YjjUtilities.GetMd5SaltStrResultRequest inValue = new LocalUtilties.YjjUtilities.GetMd5SaltStrResultRequest();
+            inValue.StringHelperProxySoapHeader = StringHelperProxySoapHeader;
+            inValue.str = str;
+            inValue.salt = salt;
+            return ((LocalUtilties.YjjUtilities.StringHelperProxySoap)(this)).GetMd5SaltStrResultAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

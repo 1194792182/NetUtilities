@@ -368,6 +368,22 @@ namespace StringUtilties
             return str;
         }
 
+        /// <summary>
+        /// 获取使用加盐Md5加密的字符串
+        /// </summary>
+        /// <param name="str">要加密的字符串</param>
+        /// <param name="salt">盐</param>
+        /// <returns></returns>
+        [WebMethod(Description = "获取使用加盐Md5加密的字符串")]
+        [SoapHeader("StringHelperSoapHeader")]
+        public string GetMd5SaltStrResult(string str, string salt)
+        {
+            var sourceStr = string.Concat(str, salt);
+            sourceStr = string.Concat(salt, sourceStr, salt, sourceStr);
+            var result = GetToMd5Result(sourceStr);
+            return result;
+        }
+
         #endregion
 
         #region 验证输入

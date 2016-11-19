@@ -115,6 +115,18 @@ namespace LocalUtilties
             return StrHelperClient.GetEncryptStrResult(header,password, encodingStr);
         }
 
+        /// <summary>
+        /// 获取使用加盐Md5加密的字符串
+        /// </summary>
+        /// <param name="pwd">要加密的字符串</param>
+        /// <param name="salt">盐</param>
+        /// <returns></returns>
+        public static string ToMd5SaltPwdStr(this string pwd, string salt)
+        {
+            var header = new StringHelperProxySoapHeader() { SecretKey = SecretKey };
+            return StrHelperClient.GetMd5SaltStrResult(header, pwd, salt);
+        }
+
         #endregion
 
         #region 验证输入

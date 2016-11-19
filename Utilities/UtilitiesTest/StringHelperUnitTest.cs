@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using LocalUtilties;
@@ -60,6 +61,18 @@ namespace UtilitiesTest
             var encryptResult = password.ToPasswordStr("132g");
             Assert.IsTrue(!string.IsNullOrEmpty(encryptResult), "!string.IsNullOrEmpty(encryptResult)");
             Assert.IsTrue(encryptResult.Length == 32, "encryptResult.Length==32");
+        }
+
+        /// <summary>
+        /// 测试MD5加盐加密字符串
+        /// </summary>
+        [TestMethod]
+        public void TestToMd5SaltPwdStr()
+        {
+            var password = "123456";
+            var firstEncryptResult = password.ToMd5SaltPwdStr("12$#");
+            var secondEncryptResult = password.ToMd5SaltPwdStr(String.Empty);
+            Assert.IsTrue(!firstEncryptResult.Equals(secondEncryptResult),"!firstEncryptResult.Equals(secondEncryptResult)");
         }
 
         #endregion

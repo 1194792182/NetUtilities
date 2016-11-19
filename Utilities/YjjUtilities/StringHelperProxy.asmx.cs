@@ -158,6 +158,17 @@ namespace YjjUtilities
             }
             return CurrentClient.GetEncryptStrResult(CurrentHeader, str, encodingStr);
         }
+        
+        [WebMethod(Description = "获取使用加盐Md5加密的字符串")]
+        [SoapHeader("StringHelperProxySoapHeader")]
+        public string GetMd5SaltStrResult(string str, string salt)
+        {
+            if (!StringHelperProxySoapHeader.IsValid)
+            {
+                return null;
+            }
+            return CurrentClient.GetMd5SaltStrResult(CurrentHeader, str, salt);
+        }
 
         #endregion
 

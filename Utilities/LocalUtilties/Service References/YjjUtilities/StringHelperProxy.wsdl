@@ -156,6 +156,21 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetMd5SaltStrResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="salt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMd5SaltStrResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMd5SaltStrResultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="IsNum">
         <s:complexType>
           <s:sequence>
@@ -604,6 +619,15 @@
   <wsdl:message name="GetEncryptStrResultStringHelperProxySoapHeader">
     <wsdl:part name="StringHelperProxySoapHeader" element="tns:StringHelperProxySoapHeader" />
   </wsdl:message>
+  <wsdl:message name="GetMd5SaltStrResultSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMd5SaltStrResult" />
+  </wsdl:message>
+  <wsdl:message name="GetMd5SaltStrResultSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMd5SaltStrResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMd5SaltStrResultStringHelperProxySoapHeader">
+    <wsdl:part name="StringHelperProxySoapHeader" element="tns:StringHelperProxySoapHeader" />
+  </wsdl:message>
   <wsdl:message name="IsNumSoapIn">
     <wsdl:part name="parameters" element="tns:IsNum" />
   </wsdl:message>
@@ -875,6 +899,11 @@
       <wsdl:input message="tns:GetEncryptStrResultSoapIn" />
       <wsdl:output message="tns:GetEncryptStrResultSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetMd5SaltStrResult">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取使用加盐Md5加密的字符串</wsdl:documentation>
+      <wsdl:input message="tns:GetMd5SaltStrResultSoapIn" />
+      <wsdl:output message="tns:GetMd5SaltStrResultSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="IsNum">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">是否数字</wsdl:documentation>
       <wsdl:input message="tns:IsNumSoapIn" />
@@ -1088,6 +1117,16 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:GetEncryptStrResultStringHelperProxySoapHeader" part="StringHelperProxySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMd5SaltStrResult">
+      <soap:operation soapAction="http://www.1194792182.com/GetMd5SaltStrResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMd5SaltStrResultStringHelperProxySoapHeader" part="StringHelperProxySoapHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -1431,6 +1470,16 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:GetEncryptStrResultStringHelperProxySoapHeader" part="StringHelperProxySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMd5SaltStrResult">
+      <soap12:operation soapAction="http://www.1194792182.com/GetMd5SaltStrResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetMd5SaltStrResultStringHelperProxySoapHeader" part="StringHelperProxySoapHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />
